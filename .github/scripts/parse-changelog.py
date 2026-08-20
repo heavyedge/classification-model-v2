@@ -19,7 +19,7 @@ def heading_version(title: str) -> str:
         if closing_bracket != -1:
             return title[1:closing_bracket].strip()
 
-    # Supports both "## v2.2.3" and "## v2.2.3 - 2026-07-20".
+    # Supports both "## vX.Y.Z" and "## vX.Y.Z - 2026-07-20".
     return re.split(r"\s+-\s+", title, maxsplit=1)[0].strip()
 
 

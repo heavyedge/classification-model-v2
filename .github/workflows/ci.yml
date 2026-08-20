@@ -56,7 +56,7 @@ jobs:
         - run: HEAVYEDGE_TEST_MODE=1 ./setup.sh
           env:
             HUGGINGFACE_TOKEN: ${{ secrets.HUGGINGFACE_TOKEN }}
-            LABELS_V1_GDRIVE: ${{ secrets.LABELS_V1_GDRIVE }}
+            LABELS_V2_GDRIVE: ${{ secrets.LABELS_V2_GDRIVE }}
 
         - name: build models and examples
           run: HEAVYEDGE_TEST_MODE=1 make
@@ -68,7 +68,7 @@ jobs:
           with:
             name: train-data
             path: |
-              _data/v2/mean_profiles/dataset5/*
+              _data/v2/profiles/mean_profiles/dataset5/*
               _data/v2/labels/dataset5/*
             retention-days: 1
 

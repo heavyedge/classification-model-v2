@@ -29,7 +29,7 @@ profiles_pid=$!
 
 (
   uv pip install --system 'gdown<6.0.0'
-  gdown --fuzzy "$LABELS_V1_GDRIVE" -O ./_data/v2/labels.tar
+  gdown --fuzzy "$LABELS_V2_GDRIVE" -O ./_data/v2/labels.tar
   mkdir -p ./_data/v2/labels
   tar -xf _data/v2/labels.tar -C _data/v2/labels
 ) &
