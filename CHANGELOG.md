@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.0.0] - 2026-08-17
 
 - Model: `heavyedge-classify==1.4.0`
-- Dataset: `heavyedge/profiles:v2.0.0`
+- Dataset: `heavyedge/profiles:v1.0.0`
 
 ### Added
 
