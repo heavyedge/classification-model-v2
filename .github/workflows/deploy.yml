@@ -76,11 +76,11 @@ jobs:
 
       - name: Create Google Drive link secret
         env:
-          LABELS_V2_GDRIVE: ${{ secrets.LABELS_V2_GDRIVE }}
+          LABELS_V1_GDRIVE: ${{ secrets.LABELS_V1_GDRIVE }}
           KUBE_NAMESPACE: ${{ secrets.KUBE_NAMESPACE }}
         run: |
           kubectl create secret generic classification-model-gdrive \
-            --from-literal=LABELS_V2_GDRIVE="$LABELS_V2_GDRIVE" \
+            --from-literal=LABELS_V1_GDRIVE="$LABELS_V1_GDRIVE" \
             --namespace="$KUBE_NAMESPACE" \
             --dry-run=client -o yaml | kubectl apply -f -
 
