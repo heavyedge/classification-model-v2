@@ -34,7 +34,7 @@ Run the following commands to download the profile dataset and labels in the `_d
 
 ```sh
 export HUGGINGFACE_TOKEN="..."
-export LABELS_V2_GDRIVE="..."
+export LABELS_V1_GDRIVE="..."
 ./setup.sh
 ```
 
