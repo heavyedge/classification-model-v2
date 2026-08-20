@@ -7,14 +7,14 @@
 
 all: models examples
 
-models: models-v1
+models: models-v2
 
-examples: examples-v1
+examples: examples-v2
 
-tests: test-v1
+tests: test-v2
 
 clean:
 	shopt -s globstar nullglob
 	rm -rf _temp benchmarks models/**/*.pkl
 
-include make/v1.mk
+include make/v2.mk

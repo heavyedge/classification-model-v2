@@ -130,7 +130,7 @@ jobs:
           kubectl patch configmap "$github_config_map_name" \
             --namespace="$KUBE_NAMESPACE" \
             --type=merge \
-            --patch="{\"metadata\":{\"ownerReferences\":[{\"apiVersion\":\"batch/v1\",\"kind\":\"Job\",\"name\":\"${job_name}\",\"uid\":\"${job_uid}\"}]}}"
+            --patch="{\"metadata\":{\"ownerReferences\":[{\"apiVersion\":\"batch/v2\",\"kind\":\"Job\",\"name\":\"${job_name}\",\"uid\":\"${job_uid}\"}]}}"
 
           kubectl wait \
             --namespace="$KUBE_NAMESPACE" \
