@@ -68,7 +68,7 @@ jobs:
           with:
             name: train-data
             path: |
-              _data/v1/mean_profiles/dataset5/*
+              _data/v1/profiles/mean_profiles/dataset5/*
               _data/v1/labels/dataset5/*
             retention-days: 1
 

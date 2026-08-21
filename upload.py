@@ -7,7 +7,7 @@ from huggingface_hub import HfApi
 from packaging.version import InvalidVersion, Version
 
 parser = argparse.ArgumentParser(description="Upload to Hugging Face Hub")
-parser.add_argument("tag", help="Version tag (e.g., v1.0.0)")
+parser.add_argument("tag", help="Version tag (e.g., v2.0.0)")
 args = parser.parse_args()
 
 version_text = args.tag.removeprefix("v")

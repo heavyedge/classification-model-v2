@@ -1,5 +1,5 @@
 # HeavyEdge-Classify Model
-[![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/heavyedge/classifier-v1)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/heavyedge/classifier-v2)
 [![GitHub repository](https://img.shields.io/badge/github-repo-blue?logo=github)](https://github.com/heavyedge/classification-model)
 
 Edge classification models for [HeavyEdge-Classify](https://pypi.org/project/heavyedge-classify/).
@@ -40,7 +40,7 @@ export LABELS_V1_GDRIVE="..."
 
 ### Acquiring the models
 
-The classification models trained by this project can be acquired by downloading them from the [model repository](https://huggingface.co/heavyedge/classifier-v1).
+The classification models trained by this project can be acquired by downloading them from the [model repository](https://huggingface.co/heavyedge/classifier-v2).
 Alternatively, you can train the models yourself if you have downloaded the dataset.
 
 Either approach creates the trained models in the `models/v*` directories.
@@ -54,7 +54,7 @@ You need:
 Run the following command:
 
 ```sh
-hf download heavyedge/classifier-v1 --repo-type model --local-dir models/v1
+hf download heavyedge/classifier-v2 --repo-type model --local-dir models/v2
 ```
 
 #### Training the models
@@ -80,7 +80,7 @@ make test
 Once a model is trained, you can pass it to the `heavyedge` command line to perform inference.
 
 ```sh
-heavyedge classify-predict <input.h5> models/v1/classifiers/minirocket.sigmoid.pkl -o <output>
+heavyedge classify-predict <input.h5> models/v2/classifiers/minirocket.sigmoid.pkl -o <output>
 ```
 
 Refer to the [HeavyEdge-Classify](https://pypi.org/project/heavyedge-classify/) documentation.
@@ -167,5 +167,5 @@ This repository stores source code for multiple major versions.
 When new major version breaks CI/CD pipeline (e.g., having conflicting requirements), new repository can be made.
 
 When a new release is made, trained models are deployed to a repository dedicated to each major release.
-For example, when `v1.0.0` is released, `models/v1` is uploaded to `classifier-v1` repository.
-This applies to other build outputs, e.g., `examples/v1`.
+For example, when `v2.0.0` is released, `models/v2` is uploaded to `classifier-v2` repository.
+This applies to other build outputs, e.g., `examples/v2`.
